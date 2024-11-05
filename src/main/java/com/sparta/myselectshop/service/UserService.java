@@ -1,13 +1,19 @@
 package com.sparta.myselectshop.service;
 
+import com.sparta.myselectshop.dto.ProductRequestDto;
+import com.sparta.myselectshop.dto.ProductResponseDto;
 import com.sparta.myselectshop.dto.SignupRequestDto;
+import com.sparta.myselectshop.entity.Product;
 import com.sparta.myselectshop.entity.User;
 import com.sparta.myselectshop.entity.UserRoleEnum;
+import com.sparta.myselectshop.repository.ProductRepository;
 import com.sparta.myselectshop.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -50,4 +56,5 @@ public class UserService {
         User user = new User(username, password, email, role);
         userRepository.save(user);
     }
+
 }

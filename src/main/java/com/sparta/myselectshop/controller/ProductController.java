@@ -20,7 +20,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @PostMapping("/products")
+    //@PostMapping("/products")
     public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) {
 
         return productService.createProduct(requestDto);
@@ -32,7 +32,7 @@ public class ProductController {
         return productService.updateProduct(id, requestDto);
     }
 
-    @GetMapping("/products")
+   // @GetMapping("/products")
     public List<ProductResponseDto> getProducts() {
         return productService.getProducts();
     }

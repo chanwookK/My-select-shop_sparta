@@ -20,7 +20,7 @@ public class Folder {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private User user;
 
     public Folder(String name, User user) {

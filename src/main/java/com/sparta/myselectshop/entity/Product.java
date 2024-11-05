@@ -38,7 +38,7 @@ public class Product extends Timestamped {
     private int myprice;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "product")
